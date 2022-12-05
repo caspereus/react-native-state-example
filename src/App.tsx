@@ -3,7 +3,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {
-  BasicExample, ReducerExample, ZustandExample, Home
+  BasicExample, ReducerExample, ZustandExample, Home, CustomHookExample
 } from './pages';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NativeBaseProvider } from 'native-base';
@@ -29,6 +29,9 @@ const App = () => {
             />
             <Stack.Screen
               name="ZustandExample" component={ZustandExample}
+            />
+            <Stack.Screen
+              name="CustomHookExample" component={CustomHookExample}
             />
           </Stack.Navigator>
         </NavigationContainer>

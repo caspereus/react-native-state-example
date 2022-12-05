@@ -19,6 +19,10 @@ const Home = () => {
     navigation.navigate('ZustandExample');
   }
 
+  const navigateToCustomHookExample = () => {
+    navigation.navigate('CustomHookExample');
+  }
+
   return (
     <VStack space="16px" padding="16px">
       <Button
@@ -44,6 +48,14 @@ const Home = () => {
         fontWeight="bold"
         onPress={navigateToZustandExample}>
         Navigate To Zustand Example
+      </Button>
+      <Button
+        borderRadius="full"
+        bgColor="orange.500"
+        width="full"
+        fontWeight="bold"
+        onPress={navigateToCustomHookExample}>
+        Navigate To Custom Hook Example
       </Button>
     </VStack>
   )

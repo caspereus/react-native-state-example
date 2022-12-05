@@ -3,8 +3,7 @@ type RootStackParams = {
   BasicExample: undefined;
   ReducerExample: undefined;
   ZustandExample: undefined;
-  Forum: undefined;
-  ForumDetail: undefined;
+  CustomHookExample: undefined;
 };
 
 export type {RootStackParams};
