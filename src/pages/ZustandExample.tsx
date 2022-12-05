@@ -8,9 +8,7 @@ const ZustandExample = () => {
   const store = useExampleStore();
   const { counter, items } = store.state;
 
-  const onPressButton = () => {
-    store.increment();
-  }
+  const onPressButton = () => store.increment();
 
   const renderItem = useCallback(({ item }: { item: number }) => {
     return (
@@ -30,7 +28,6 @@ const ZustandExample = () => {
     <>
       <Box padding="16px">
         <CounterContainer />
-
         <Text mb="16px">
           Counter Number : {counter}
         </Text>
