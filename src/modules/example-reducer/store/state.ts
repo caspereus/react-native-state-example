@@ -1,11 +1,11 @@
 type State = {
   counter: number;
-  items: number[];
+  historyItems: number[];
 };
 
 const initialState: State = {
   counter: 0,
-  items: [0],
+  historyItems: [0],
 };
 
 type ZustandState = {

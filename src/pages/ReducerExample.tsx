@@ -37,7 +37,7 @@ const ReducerExample = () => {
         </Button>
         <FlatList
           width="full"
-          data={state.items}
+          data={state.historyItems}
           renderItem={renderItem}
         />
       </Box>

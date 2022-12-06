@@ -1,6 +1,6 @@
 import {useReducer} from 'react';
 import create from 'zustand';
-import {reducer, initialState, ZustandState, State} from './';
+import {reducer, initialState, ZustandState} from './';
 
 export const useExampleReducer = () => useReducer(reducer, initialState);
 
@@ -13,7 +13,7 @@ export const useExampleStore = create<ZustandState>((set, get) => ({
         state: {
           ...state,
           counter: state.counter + 1,
-          items: [...state.items, increasedCounter],
+          historyItems: [...state.historyItems, increasedCounter],
         },
       };
     }),

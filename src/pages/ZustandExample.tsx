@@ -6,13 +6,13 @@ import { CounterContainer } from '../ui/blocks';
 const ZustandExample = () => {
   const toast = useToast();
   const store = useExampleStore();
-  const { counter, items } = store.state;
+  const { counter, historyItems } = store.state;
 
   const onPressButton = () => store.increment();
 
   const renderItem = useCallback(({ item }: { item: number }) => {
     return (
-      <Box padding="16px">
+      <Box padding="16px" key={item}>
         <Text>{item}</Text>
       </Box>
     )
@@ -38,7 +38,7 @@ const ZustandExample = () => {
         </Button>
         <FlatList
           width="full"
-          data={items}
+          data={historyItems}
           renderItem={renderItem}
         />
       </Box>

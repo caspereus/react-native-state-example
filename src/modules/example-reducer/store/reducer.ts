@@ -8,7 +8,7 @@ const reducer = (state: State, {_tag, payload}: Action): State => {
       return {
         ...state,
         counter: increasedCounter,
-        items: [...state.items, increasedCounter],
+        historyItems: [...state.historyItems, increasedCounter],
       };
     case 'RESET':
       return initialState;

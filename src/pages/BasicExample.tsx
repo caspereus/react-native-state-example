@@ -5,14 +5,14 @@ import React, { useCallback, useEffect, useState } from 'react';
 const BasicExample = () => {
   const toast = useToast();
   const [counter, setCounter] = useState<number>(0);
-  const [items, setItems] = useState<number[]>([]);
+  const [historyItems, setHistoryItems] = useState<number[]>([]);
 
   const incrementCounter = () => {
     setCounter((value) => value + 1);
   }
 
   const addItem = () => {
-    setItems([...items, counter])
+    setHistoryItems([...historyItems, counter])
   }
 
   const onPressButton = () => {
@@ -47,7 +47,7 @@ const BasicExample = () => {
         </Button>
         <FlatList
           width="full"
-          data={items}
+          data={historyItems}
           renderItem={renderItem}
         />
       </Box>
