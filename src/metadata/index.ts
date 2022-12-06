@@ -4,6 +4,7 @@ type RootStackParams = {
   ReducerExample: undefined;
   ZustandExample: undefined;
   CustomHookExample: undefined;
+  ProfileExample: undefined;
 };
 
 export type {RootStackParams};
